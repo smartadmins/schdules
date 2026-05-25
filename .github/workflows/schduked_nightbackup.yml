@@ -1,0 +1,15 @@
+name: Nightly Backup
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '*/2 * * * *'
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message
+        run: echo "Workflow running every 2 mins"
